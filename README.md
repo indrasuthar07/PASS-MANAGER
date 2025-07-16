@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<<<<<<< HEAD
 
 ## Deployment Instructions
 
@@ -42,3 +43,5 @@ If you are developing a production application, we recommend using TypeScript an
 ### 4. Troubleshooting
 - If you see network errors, check that `VITE_API_URL` is set correctly and your backend is running and accessible.
 - For CORS issues, ensure your backend allows requests from your frontend domain.
+=======
+>>>>>>> 8c76e7c1c7b906539a5f91a7c2e4ebe358ec577c

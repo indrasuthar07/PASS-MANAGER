@@ -10,14 +10,13 @@ import Tips from './components/Tips'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() { 
-  // For demo, pass a fake password count to Profile
   const [passwordCount] = useState(7)
 
   return (
     <BrowserRouter>
       <AnimatedBackground />
       <Navbar>
-        
+        {/* ThemeSwitcher or other children */}
       </Navbar>
       <Routes>
         <Route path="/" element={
@@ -30,7 +29,7 @@ function App() {
             <Tips />
           </>
         } />
-        
+        {/* Add other routes if needed */}
       </Routes>
       <Footer/>
     </BrowserRouter>
