@@ -1,0 +1,243 @@
+/* Reset and base styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-attachment: fixed;
+  color: #1e293b;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main app container */
+.bg-green-50 {
+  min-height: calc(100vh - 120px);
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(120deg, #f0fdfa 60%, #e0e7ff 100%);
+}
+
+/* Responsive utility */
+@media (max-width: 768px) {
+  .bg-green-50 {
+    padding: 1rem 0 1rem 0;
+    min-height: calc(100vh - 100px);
+  }
+  .md\\:mycontainer {
+    padding: 0.5rem !important;
+  }
+  h1.text-4xl {
+    font-size: 2rem !important;
+  }
+  .text-lg {
+    font-size: 1rem !important;
+  }
+  .table-auto {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Custom container for Manager */
+.md\\:mycontainer {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  padding: 2rem;
+  transition: box-shadow 0.3s;
+}
+
+@media (max-width: 700px) {
+  .md\\:mycontainer {
+    max-width: 98vw;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}
+
+/* Table styling for passwords */
+.table-auto {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+th, td {
+  padding: 0.75rem 0.5rem;
+}
+
+/* Button styles */
+button, .rounded-full {
+  border-radius: 9999px;
+}
+
+button {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:active {
+  box-shadow: 0 1px 4px rgba(59,130,246,0.12);
+}
+
+/* Input focus */
+input:focus {
+  outline: 2px solid #3b82f6;
+  background: #f0f9ff;
+}
+
+/* Lordicon tweaks */
+.lordiconcopy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Navbar shadow for depth */
+nav {
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+}
+
+/* Responsive table */
+@media (max-width: 600px) {
+  .table-auto, table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    background: #f1f5f9;
+  }
+  td {
+    text-align: left;
+    padding-left: 1rem;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #3b82f6;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    font-size: 0.9em;
+  }
+}
+
+/* Font family updates */
+h1, h2, h3, .hero-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+body, p, li, input, button, .features-list {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Bigger, stylish headings */
+h1, .hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #2563eb 30%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 24px rgba(59,130,246,0.12);
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 700px) {
+  h1, .hero-title {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animated background container */
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -20;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Add more as needed for new components */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.feature-item {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(59,130,246,0.08);
+  padding: 1.5rem 2rem;
+  min-width: 220px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.feature-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.13);
+}
+
+.tips-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, #f0fdfa 60%, #e0e7ff 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(31,38,135,0.07);
+}
+.tips-section h2 {
+  color: #0ea5e9;
+}
+.tips-list {
+  list-style: disc inside;
+  color: #334155;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
